@@ -1,0 +1,170 @@
+
+
+/* Add your CSS here */
+
+/* CSS Variables */
+
+:root {
+    --primary-color: rgb(179, 215, 247);
+    --secondary-color: #333;
+    --tertiary-color: #f4f4f4;
+    --quaternary-color: #333;
+    --quinary-color: #f4f4f4;
+    --senary-color: #333;
+    --septenary-color: #f4f4f4;
+    --octonary-color: #333;
+    --nonary-color: #f4f4f4;
+    --denary-color: #333;
+    --easing: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+body {
+    font-family: "Flamenco", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    border: 2px solid black;
+    padding: 20px 20px 40px 20px;
+    margin: 40px 100px;
+}
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: move 2s infinite;
+}
+
+.text-light h3{
+    font-family: "Flamenco", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    margin: auto;  
+    
+  }
+
+  /** Text Hover effect animation */
+  h3:hover {
+    font-size: 2vw;
+  }
+  /*
+  .flamenco-regular {
+    font-family: "Flamenco", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+*/
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(200px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* BAll linear Right animation*/
+.ball {
+    height: 5vmin;
+    width: 5vmin;
+    border-radius: 50%;
+    background: radial-gradient(circle at bottom right, #fb2324, #fe932a);
+    animation: slide-right 2s linear infinite;
+    -webkit-animation: slide-right 1s var(--easing) infinite;
+    cursor: pointer;
+    
+}
+
+.ball:hover {
+    background: #fe932a;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+}
+to {
+    transform: translateX(5vw);
+    /*120vhofviewportheight*/-webkit-transform: translateX(120%);
+    -moz-transform: translateX(5vw);
+    -ms-transform: translateX(5vw);
+    -o-transform: translateX(5vw);
+    -webkit-transform: translateX(5vw);
+}
+}
+
+
+
+/* Static Ball */
+
+
+.static-ball {
+    height: 5vmin;
+    width: 5vmin;
+    left: 80vw;
+    border-radius: 50%;
+    background: radial-gradient(circle at bottom right, #fb2324, #fe932a);
+    transition: all 2s 05s ease-in-out  ;
+    -webkit-transition: all 2s 0.5s ease-in-out  ;
+    -moz-transition: all 2s 05s ease-in-out  ;
+    -ms-transition: all 2s 05s ease-in-out  ;
+    -o-transition: all 2s 05s ease-in-out  ;
+    cursor: pointer;
+
+    /* animation 
+    animation-name: slide-right;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse; or alternate;
+    */
+  
+}
+
+
+/* 
+animation-name: slide-up;
+animation-duration: 1s;
+animation-timing-function: ease-in-out;
+
+
+
+*/
+
+
+
+
+
+.static-ball:hover {
+    background: #fe932a;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
